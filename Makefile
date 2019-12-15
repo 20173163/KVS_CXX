@@ -29,10 +29,10 @@ $(LIB): $(OBJS)
 	ar rcs $@ $<
 # libdll.so
 $(SO): $(SRCS)
-	$(CXX) -shared -fPIC -o $@ \$(SRCS)
+	$(CXX) -shared -o $@ \$(SRCS)
 # this is a generic rule for .o files
 %.o: %.cpp $(HEADER)
 	$(CXX) $(OPTS) $< -o $@
 # clean line
 clean:
-	rm -f test_$(TARG) test_$(TARG2) $(OBJS) $(OBJS2) $(LIB) $(SO)
+	rm -f test_$(TARG) test_$(TARG2) $(OBJS) $(OBJS2) $(LIB) $(SO) test_$(TARG).txt test_$(TARG2).txt

@@ -24,10 +24,10 @@ int main(int argc, char* argv[]) {
 		exit(1);
 	}
 
-	put = (int(*)(char*, char*, int))dlsym(handle, "put");
-	get = (char*(*)(char*, int*))dlsym(handle, "get");
-	open = (int(*)())dlsym(handle, "open");
-	close = (void(*)())dlsym(handle, "close");
+	put = (int (*)(char*, char*, int))dlsym(handle, "put");
+	get = (char* (*)(char*, int*))dlsym(handle, "get");
+	open = (int (*)())dlsym(handle, "open");
+	close = (void (*)())dlsym(handle, "close");
 	if((error=dlerror()) != NULL) {
 		fprintf(stderr, "%s\n", error);
 		exit(1);
