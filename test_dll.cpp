@@ -7,7 +7,7 @@
 
 int main(int argc, char* argv[]) {
         if(argc!=4) {
-                perror("Usage: ./test_static put.txt get.txt test_static.txt");
+                printf("Usage: ./test_dll put.txt get.txt test_dll.txt\n");
                 exit(1);
         }
 
