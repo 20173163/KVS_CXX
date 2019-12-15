@@ -1,7 +1,8 @@
-#include "kvs.h"
+#include <map>
+#include <string>
 
 extern std::map<std::string, std::string>m;
 
-void close() {
+extern "C" void close() {
 	m.clear();
 }

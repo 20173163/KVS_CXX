@@ -5,10 +5,6 @@
 #define KEY_SIZE 16
 #define VAL_SIZE 99
 
-using namespace std;
-
-extern std::map<std::string, std::string>m;
-
 int main(int argc, char* argv[]) {
 	if(argc!=4) {
 		perror("Usage: ./test_static put.txt get.txt test_static.txt");

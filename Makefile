@@ -23,13 +23,13 @@ $(TARG): $(OBJS) $(LIB)
 	$(CXX) -static -o test_$(TARG) $(OBJS) ./$(LIB)
 # generate "dll" executable
 $(TARG2): $(OBJS2) $(SO)
-	$(CXX) -o test_$(TARG2) test_dll.cpp -ldl
+	$(CXX) -o test_$(TARG2) test_$(TARG2).cpp -ldl
 # libstatic.a
 $(LIB): $(OBJS)
 	ar rcs $@ $<
 # libdll.so
 $(SO): $(SRCS)
-	$(CXX) -shared -fPIC -o $@ \$(SRCS)
+	$(CXX) -shared -fPIC -o $(SO) $(SRCS)
 # this is a generic rule for .o files
 %.o: %.cpp $(HEADER)
 	$(CXX) $(OPTS) $< -o $@

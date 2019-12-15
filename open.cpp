@@ -1,9 +1,10 @@
-#include "kvs.h"
+#include <map>
+#include <string>
 
 std::map<std::string, std::string>m;
 std::map<std::string, std::string>::iterator iter;
 
-int open() {
+extern "C" int open() {
 	
 	return 0;
 }
