@@ -29,7 +29,7 @@ $(LIB): $(OBJS)
 	ar rcs $@ $<
 # libdll.so
 $(SO): $(SRCS)
-	$(CXX) -shared -o $@ \$(SRCS)
+	$(CXX) -shared -fPIC -o $@ \$(SRCS)
 # this is a generic rule for .o files
 %.o: %.cpp $(HEADER)
 	$(CXX) $(OPTS) $< -o $@

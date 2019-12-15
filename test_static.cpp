@@ -1,5 +1,6 @@
 #include "kvs.h"
-#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 #include <cstring>
 #define KEY_SIZE 16
 #define VAL_SIZE 99
