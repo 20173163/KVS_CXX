@@ -1,3 +1,4 @@
+#include "kvs.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <cstring>
@@ -68,6 +69,7 @@ int main(int argc, char* argv[]) {
                                 int* l=&k;
                                 fscanf(fp, "%s\n", str);
                                 strcpy(str2, get(str, l));
+				fprintf(fp2, "%s\n", str2);
                         }
                 }
         }
